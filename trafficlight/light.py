@@ -26,8 +26,8 @@ class Light:
 class Lights(enum.Enum):
 
     GREEN = Light(26)
-    YELLOW = Light(19)
-    RED = Light(13)
+    YELLOW = Light(13)
+    RED = Light(19)
 
     
 if __name__ == '__main__':
