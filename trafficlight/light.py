@@ -7,13 +7,6 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
 
-class Lights(enum.Enum):
-
-    GREEN = Light(26)
-    YELLOW = Light(19)
-    RED = Light(13)
-
-
 class Light:
 
     def __init__(self, pin: int) -> None:
@@ -30,6 +23,13 @@ class Light:
         GPIO.output(self._pin, GPIO.LOW)
 
 
+class Lights(enum.Enum):
+
+    GREEN = Light(26)
+    YELLOW = Light(19)
+    RED = Light(13)
+
+    
 if __name__ == '__main__':
     Lights.GREEN.value.deactivate()
     Lights.YELLOW.value.deactivate()
